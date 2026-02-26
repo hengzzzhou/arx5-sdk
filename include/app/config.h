@@ -98,8 +98,8 @@ class RobotConfigFactory
             (Pose6d() << 0.6, 0.6, 0.6, 1.8, 1.8, 1.8).finished(),         // ee_vel_max
             0.3,                                                           // gripper_vel_max
             1.5,                                                           // gripper_torque_max
-            0.088,                                                         // gripper_width
-            5.03,                                                          // gripper_open_readout
+            0.082,                                                         // gripper_width
+            -3.4,                                                          // gripper_open_readout
             6,                                                             // joint_dof
             std::vector<int>{1, 2, 4, 5, 6, 7},                            // motor_id
             std::vector<MotorType>{MotorType::EC_A4310, MotorType::EC_A4310, MotorType::EC_A4310, MotorType::DM_J4310,
@@ -297,7 +297,7 @@ class ControllerConfigFactory
             (VecDoF(7) << 2.0, 2.0, 2.0, 2.0, 1.0, 1.0, 0.7).finished(),        // default_kd
             5.0,                                                                // default_gripper_kp
             0.2,                                                                // default_gripper_kd
-            20,                                                                 // over_current_cnt_max
+            100,                                                                // over_current_cnt_max
             0.002,                                                              // controller_dt
             true,                                                               // gravity_compensation
             true,                                                               // background_send_recv
@@ -311,7 +311,7 @@ class ControllerConfigFactory
             (VecDoF(6) << 2.0, 2.0, 2.0, 1.0, 1.0, 0.7).finished(),       // default_kd
             5.0,                                                          // default_gripper_kp
             0.2,                                                          // default_gripper_kd
-            20,                                                           // over_current_cnt_max
+            100,                                                          // over_current_cnt_max
             0.002,                                                        // controller_dt
             true,                                                         // gravity_compensation
             true,                                                         // background_send_recv
@@ -325,7 +325,7 @@ class ControllerConfigFactory
             (VecDoF(7) << 5.0, 5.0, 5.0, 5.0, 1.0, 1.0, 1.0).finished(),            // default_kd
             5.0,                                                                    // default_gripper_kp
             0.2,                                                                    // default_gripper_kd
-            20,                                                                     // over_current_cnt_max
+            100,                                                                    // over_current_cnt_max
             0.002,                                                                  // controller_dt
             true,                                                                   // gravity_compensation
             true,                                                                   // background_send_recv
@@ -339,7 +339,7 @@ class ControllerConfigFactory
             (VecDoF(6) << 5.0, 5.0, 5.0, 1.0, 1.0, 1.0).finished(),           // default_kd
             5.0,                                                              // default_gripper_kp
             0.2,                                                              // default_gripper_kd
-            20,                                                               // over_current_cnt_max
+            100,                                                              // over_current_cnt_max
             0.002,                                                            // controller_dt
             true,                                                             // gravity_compensation
             true,                                                             // background_send_recv
